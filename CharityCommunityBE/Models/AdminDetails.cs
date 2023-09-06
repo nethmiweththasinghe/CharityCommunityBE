@@ -1,6 +1,6 @@
 ﻿namespace CharityCommunityBE.Models
 {
-    public class UserDetails
+    public class AdminDetails
     {
         public Guid Id { get; set; }
         public string? FirstName { get; set; }
