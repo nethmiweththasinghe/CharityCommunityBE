@@ -52,6 +52,7 @@ namespace CharityCommunityBE.Controllers
 
             return Ok(new
             {
+                Data = userDetails,
                 Token = userDetails.Token,
                 Message = "Login Success"
             });
@@ -74,6 +75,7 @@ namespace CharityCommunityBE.Controllers
 
             return Ok(new 
             { 
+                Data = userDetails,
                 Token = user.Token,
                 Message = "Login Success" 
             });
@@ -92,19 +94,6 @@ namespace CharityCommunityBE.Controllers
             projectDetails = project;
             return Ok(projectDetails);
 
-
-            //SqlConnection con = new SqlConnection(_configuration.GetConnectionString("CharityCommunityDBCon"));
-            //SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Project WHERE Id = "+@projectId, con);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-
-            //ProjectDetails projectDetails = new ProjectDetails();
-            //projectDetails.Id = Convert.ToInt32(dt.Rows[0]["Id"]);
-            //projectDetails.Name = Convert.ToString(dt.Rows[0]["Name"]);
-            //projectDetails.CreatedDate = Convert.ToDateTime(dt.Rows[0]["CreatedDate"]);
-            //projectDetails.Description = Convert.ToString(dt.Rows[0]["Description"]);
-
-            //return Ok(projectDetails);
         }
 
         [HttpPost]
